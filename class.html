@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>班级课表</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      text-align: center;
+    }
+    
+    th,
+    td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    
+    th {
+      background-color: #7cb5ec;
+    }
+    
+    .no-class {
+      color: transparent;
+    }
+	p{
+		color: red;text-align: center;
+	}
+	h1{
+		text-align: center;
+	}
+  </style>
+</head>
+
+<body>
+	<h1>20日语2班班级课表简洁版</h1>
+  <!-- 判断当前周数 -->
+  <p id="week_num"></p> <!-- 在表格上方插入文字 -->
+
+  <table>
+    <tr>
+      <th></th>
+      <th>星期一</th>
+      <th>星期二</th>
+      <th>星期三</th>
+      <th>星期四</th>
+      <th>星期五</th>
+    </tr>
+    <tr>
+      <td>上午第一节</td>
+	  <td class="no-class"></td>
+      <td>中国近现代史纲要<br>黄中华<br>致知楼220 </td>
+      <td>中国近现代史纲要<br>黄中华<br>知行楼153 </td>
+      <td>商务日语听说<br>魏薇<br>致知楼508 </td>
+      <td>高级日语Ⅱ<br>黄若梅<br>知行楼504 </td>
+    </tr>
+    <tr>
+      <td>上午第二节</td>
+      <td>高级日语Ⅱ<br>黄若梅<br>知行楼564 </td>
+      <td>口译理论与实践Ⅰ<br>陈怡彤<br>致知楼504(同声传译室) </td>
+      <td>高级日语Ⅱ<br>黄若梅<br>知行楼530</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>下午第一节</td>
+	  <td></td>
+      <!--<td>日语笔译技能训练Ⅰ<br>李耀<br>知行楼504 </td>-->
+      <td></td>
+      <td></td>
+      <td>日语演讲与辩论技能训练<br>阮书翰<br>知行楼533 </td>
+      <td>日本商务礼仪<br>李沫<br>知行楼502 </td>
+    </tr>
+    <tr>
+      <td>下午第二节</td>
+      <td>笔译理论与实践Ⅰ<br>李耀<br>知行楼504 </td>
+      <td></td>
+      <td>跨文化交流<br>周乔<br>知行楼446 </td>
+      <td>日语阅读Ⅱ<br>莫慧<br>知行楼504 </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>晚上第一节</td>
+      <td class="no-class"></td>
+      <td class="no-class"></td>
+      <td class="no-class"></td>
+      <td class="no-class"></td>
+      <td class="no-class"></td>
+    </tr>
+  </table>
+
+  <script>
+    // 判断当前周数
+    var start = new Date('2023-02-27'); // 设置起始周的日期
+    var today = new Date(); // 获取当前日期
+    var diff = Math.floor((today - start) / (1000*60*60*24*7)); // 计算已经过去了多少个完整的周期
+    var week_num = diff + 1; // 周数加一为当前周数
+    document.getElementById("week_num").innerHTML = "本周是第" + week_num + "周（注:每周日显示下周的课程）"; // 输出相应的文字到网页上
+  </script>
+  <div style="text-align:center; margin: 20px 0px;">
+    <a href="./index.html">班级作业</a>
+    <span style="padding: 0 10px;">|</span>
+    <a href="./name.html">随机点名</a>
+  </div>
+</body>
+
+</html>

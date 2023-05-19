@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>日语2班随机抽签页面</title>
+		<style type="text/css">
+			a {
+				color: #FFFFFF;
+				font-size: 16px;
+				text-decoration: none;
+			}
+			body {
+				color: #FFFFFF;
+				text-align: center;
+				background: #029ef3;
+			}
+
+			button {
+				width: 140px;
+				line-height: 38px;
+				text-align: center;
+				font-weight: bold;
+				color: #fff;
+				text-shadow: 1px 1px 1px #333;
+				border-radius: 5px;
+				margin: 0 20px 20px 0;
+				position: relative;
+				overflow: hidden;
+				border: 1px solid #d2a000;
+				box-shadow: 0 1px 2px #fedd71 inset, 0 -1px 0 #a38b39 inset, 0 -2px 3px #fedd71 inset;
+				background: -webkit-linear-gradient(top, #fece34, #d8a605);
+				background: -moz-linear-gradient(top, #fece34, #d8a605);
+				background: linear-gradient(top, #fece34, #d8a605);
+			}
+
+			#item {
+				font-size: 36px;
+				font-weight: bold;
+			}
+			.demo{
+				padding: 200px 0px;
+			}
+			
+			.demo a:hover{
+				color: #f8f8f8;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 style="font-size: 36px;">日语2班随机抽签页面</h2>
+		<section class="demo">
+			<div class="demo_con" id="">
+				<button type="button" class="button yellow" onclick="pickItem()"><a href="#">随机点名</a></button>
+				<p id="item"></p>
+			</div>
+		</section>
+		
+		
+		<!--
+		1.定义一个变量 rolling 表示当前是否正在滚动选项。
+		2.修改 pickItem 函数，在滚动前将 rolling 设为 true，滚动结束后将其设为 false。
+		3.在 pickItem 函数中新增一个循环，每隔 100 毫秒更新 item 的内容，并重新设置 index，直到 rolling 变为 false。
+		4.循环中使用 setTimeout 函数控制滚动的速度和持续时间。-->
+		<script>
+			var items = ["01蔡秉宏", "02戴小妹", "03杜丽炫", "04杜晓晴", "05方华豪", "06古劲锋", "07官宇航", "08何舒燕", "09黄浩翰", "10黄杨通", "11黄裕桓", "12揭光健", "13黎思雨", "14李卓羿", "15梁莉琪", "16林楚钿", "17林铭", "18刘晓娜", "20潘国海", "21宋渊", "22唐澄聪", "23王伟琴", "24王永彬", "25韦泳存", "26魏帅", "27文佑任", "28吴凯生", "29伍航", "30肖常彬", "31许家庆", "32许文浩", "33严耀扬", "34杨烁濠", "35杨炀", "36叶蓝尹", "37余乐融", "38张盈盈","39张宇", "40张子浩", "43钟小童", "44周迎辉"];
+
+			var rolling = false;
+
+			function pickItem() {
+				if (rolling) return;
+				rolling = true;
+				var index = Math.floor(Math.random() * items.length);
+				var count = 0;
+				var interval = setInterval(function() {
+					document.getElementById("item").innerHTML = items[index];
+					index = (index + 1) % items.length;
+					count++;
+					if (count >= 20 && index == Math.floor(Math.random() * items.length)) {
+						clearInterval(interval);
+						document.getElementById("item").innerHTML = items[index];
+						rolling = false;
+					}
+				}, 100)
+			}
+		</script>
+		<div style="text-align:center;">
+		  <a href="./class.html">班级课表</a>
+		  <span style="padding: 0 10px;">|</span>
+		  <a href="./index.html">班级作业</a>
+		</div>
+	</body>
+</html>
