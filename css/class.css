@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+marquee {
+	/*滚动条css*/
+	background-color: #ffefd5;
+	color: red;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+}
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+	text-align: center;
+}
+
+th,
+td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+th {
+	background-color: #7cb5ec;
+}
+
+.no-class {
+	color: transparent;
+}
+
+p {
+	color: red;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	text-align: center;
+}
+
+.data-time {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
