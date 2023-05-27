@@ -15,10 +15,12 @@
 				width: 90%;
 				margin: auto;
 			}
-			h5{
+
+			h5 {
 				text-align: center;
 				color: red;
 			}
+
 			th,
 			td {
 				padding: 12px;
@@ -43,12 +45,21 @@
 				border-radius: 8px;
 				transition: all .3s ease-in-out;
 			}
-			a{
-				margin:5px 0px;
+
+			a {
+				margin: 5px 0px;
 				text-decoration: none;
 			}
+
 			.link:hover {
 				transform: scale(1.1);
+			}
+
+			.data-time {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: red;
 			}
 
 			/* 响应式布局 */
@@ -61,7 +72,10 @@
 	</head>
 	<body>
 		<h1 style="text-align: center;">日语2班班级作业</h1>
-		<h5 style="text-align: center;">温馨提示:如您需要更好的体验，请用电脑打开</h5>
+		<div class="data-time">
+			<p id="week_num"></p>
+			<p id="current_date" style="display: inline;"></p>
+		</div>
 		<table border="1">
 			<tr>
 				<th>课程名称</th>
@@ -76,76 +90,126 @@
 				<td>未知</td>
 				<td>完成一篇实习报告，提交电子版和纸质版</td>
 				<td>
-					<a class="link" href="./homework/zhou.html">预览</a>
+					<a class="link" href="./homework/zhou.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/e383477c460e" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>创新创业课</td>
 				<td>尤俊杰</td>
-				<td>2023-06-14</td>
+				<td>2023-06-14(第16周)</td>
 				<td>完成一篇商业计划书，提交纸质版</td>
 				<td>
-					<a class="link" href="./homework/you.html">预览</a>
+					<a class="link" href="./homework/you.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/a9fa75ebdafc" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>中国近现代史纲要</td>
 				<td>黄中华</td>
-				<td>2023-06-14</td>
+				<td>2023-06-14(第16周)</td>
 				<td>以组队形式上台表演，表演完后提交电子版PPT</td>
 				<td>
-					<a class="link" href="./homework/huang.html">预览</a>
+					<a class="link" href="./homework/huang.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/20e6b6d9a98e" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>马中化个人作业</td>
 				<td>王栋</td>
-				<td>2023-06-02</td>
+				<td>2023-06-02(第14周)</td>
 				<td>写一篇2500字论文，提交纸质版</td>
 				<td>
-					<a class="link" href="./homework/wang1-2.html">预览</a>
+					<a class="link" href="./homework/wang1-2.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/f4b5d15a9c88" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>马中化小组作业</td>
 				<td>王栋</td>
-				<td>2023-06-02</td>
+				<td>2023-06-02(第14周)</td>
 				<td>以小组的形式完成一篇论文，提交电子版</td>
 				<td>
-					<a class="link" href="./homework/wang1-1.html">预览</a>
+					<a class="link" href="./homework/wang1-1.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/af5913e534fa" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>日语课外阅读IV</td>
 				<td>王奇</td>
-				<td>2023-06-29</td>
+				<td>2023-06-29(第18周)</td>
 				<td>阅读『生き方』摘抄段落并用日语写读后感；阅读『政府活動報告』并写出经验总结</td>
 				<td>
-					<a class="link" href="./homework/wang2.html">预览</a>
+					<a class="link" href="./homework/wang2.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/f085fdafcdb1" target="_blank">下载</a>
 				</td>
 			</tr>
 			<tr>
 				<td>劳动课</td>
 				<td>李沫</td>
-				<td>2023-06-16</td>
+				<td>2023-06-16(第16周)</td>
 				<td>完成一篇结课报告，提交纸质版</td>
 				<td>
-					<a class="link" href="./homework/li.html">预览</a>
+					<a class="link" href="./homework/li.html"   target="_blank">预览</a>
 					<a class="link" href="https://pan.quark.cn/s/52d455ad7511" target="_blank">下载</a>
 				</td>
 			</tr>
+			<tr>
+				<td>日本商务礼仪</td>
+				<td>李沫</td>
+				<td>暂未公布</td>
+				<td>以组队方式录视频并写一篇结课报告。具体内容老师暂未公布</td>
+				<td>
+					<a class="link" href="./error.html" target="_blank">预览</a>
+					<a class="link" href="./error.html" target="_blank">下载</a>
+				</td>
+			</tr>
+			<tr>
+				<td>日语演讲与辩论</td>
+				<td>阮书翰</td>
+				<td>暂未公布</td>
+				<td>选定发表主题，脱稿进行一分钟以上的发表。</td>
+				<td>
+					<a class="link" href="./homework/ruan1.html"   target="_blank">预览</a>
+					<a class="link" href="./error.html" target="_blank">下载</a>
+				</td>
+			</tr>
+			<tr>
+				<td>日语演讲与辩论技能训练</td>
+				<td>阮书翰</td>
+				<td>暂未公布</td>
+				<td>选定发表主题，脱稿进行一分钟以上的发表。</td>
+				<td>
+					<a class="link" href="./homework/ruan2.html"   target="_blank">预览</a>
+					<a class="link" href="./error.html" target="_blank">下载</a>
+				</td>
+			</tr>
 		</table>
+		<script>
+			// 获取当前时间
+			var today = new Date();
+			// 将当前时间格式化为"yyyy年MM月dd日 星期x"的形式
+			var options = {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric',
+				weekday: 'long'
+			};
+			var current_date = today.toLocaleDateString('zh-CN', options);
+			// 将当前时间和本周数显示到网页上
+			var start = new Date('2023-02-26'); // 设置起始周的日期
+			var diff = Math.floor((today - start) / (1000 * 60 * 60 * 24 * 7)); // 计算已经过去了多少个完整的周期
+			var week_num = diff + 1; // 周数加一为当前周数
+			document.getElementById("week_num").innerHTML = "本周是第" + week_num + "周，"; // 输出相应的文字到网页上
+			document.getElementById("current_date").innerHTML = "今天是" + current_date; // 将当前时间显示到网页上
+		</script>
 		<!--友情链接-->
 		<div style="text-align:center; margin: 20px 0px;">
-		  <a href="./class.html">班级课表</a>
-		  <span style="padding: 0 10px;">|</span>
-		  <a href="./name.html">随机点名</a>
+			<a href="./class.html">班级课表</a>
+			<span style="padding: 0 10px;">|</span>
+			<a href="./test.html">考试通知</a>
+			<span style="padding: 0 10px;">|</span>
+			<a href="./name.html">随机点名</a>
 		</div>
 
 	</body>
