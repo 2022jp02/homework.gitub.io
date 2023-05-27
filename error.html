@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>error</title>
+		<link href="../css/homework.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div style="padding: 50px 0px;">
+			<h3 style="text-align: center;">该页面暂无预览内容，3秒后自动返回首页...</h1>
+		</div>
+		<script>
+			// 在这里替换成你想要跳转的首页地址
+			const homePageUrl = './index.html';
+
+			// 使用setTimeout延迟3秒后跳转到首页
+			setTimeout(() => {
+				window.location.href = homePageUrl;
+			}, 3000);
+		</script>
+	</body>
+</html>
