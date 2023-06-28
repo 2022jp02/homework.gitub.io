@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>日语2班班级课表</title>
+		<link href="./css/class.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<!-- 滚动条 -->
+		<marquee behavior="scroll" direction="left">
+			每周日会自动重排课表，并显示下周的课程
+		</marquee>
+
+		<h1>20日语2班班级课表简洁版</h1>
+		<!-- 判断当前日期 -->
+		<div class="data-time">
+			<p id="week_num"></p>
+			<p id="current_date" style="display: inline;"></p>
+			&nbsp;&nbsp;&nbsp;
+			<p>祝您暑假愉快！</p>
+		</div>
+		<!-- 在表格上方插入文字 -->
+		<table>
+			<tr>
+				<th></th>
+				<th>星期一</th>
+				<th>星期二</th>
+				<th>星期三</th>
+				<th>星期四</th>
+				<th>星期五</th>
+			</tr>
+			<tr>
+				<td>上午第一节</td>
+				<td class="no-class"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>上午第二节</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>下午第一节</td>
+				<td></td><!--星期一下午第一节-->
+				<td></td><!--星期二下午第一节-->
+				<td></td><!--星期三下午第一节-->
+				<td></td><!--星期四下午第一节-->
+				<td></td><!--星期五下午第一节-->
+			</tr>
+			<tr>
+				<td>下午第二节</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<!--<td>日语阅读2<br/>（15:00-17:00）<br/>知行楼425</td>-->
+			</tr>
+			<tr>
+				<td>晚上第一节</td>
+				<td class="no-class"></td>
+				<td class="no-class"></td>
+				<td class="no-class"></td>
+				<td class="no-class"></td>
+				<td class="no-class"></td>
+			</tr>
+		</table>
+
+		<script>
+			// 获取当前时间
+			var today = new Date();
+			// 将当前时间格式化为"yyyy年MM月dd日 星期x"的形式
+			var options = {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric',
+				weekday: 'long'
+			};
+			var current_date = today.toLocaleDateString('zh-CN', options);
+			// 将当前时间和本周数显示到网页上
+			var start = new Date('2023-02-26'); // 设置起始周的日期
+			var diff = Math.floor((today - start) / (1000 * 60 * 60 * 24 * 7)); // 计算已经过去了多少个完整的周期
+			var week_num = diff + 1; // 周数加一为当前周数
+			document.getElementById("week_num").innerHTML = "本周是第" + week_num + "周，"; // 输出相应的文字到网页上
+			document.getElementById("current_date").innerHTML = "今天是" + current_date; // 将当前时间显示到网页上
+		</script>
+
+		<div style="text-align:center; margin: 20px 0px;">
+			<a href="./index.html">班级作业</a>
+			<span style="padding: 0 10px;">|</span>
+			<a href="./name.html">随机点名</a>
+			<span style="padding: 0 10px;">|</span>
+			<a href="./test.html">考试通知</a>
+		</div>
+	</body>
+
+</html>
