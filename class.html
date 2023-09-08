@@ -10,7 +10,7 @@
 	<body>
 		<!-- 滚动条 -->
 		<marquee behavior="scroll" direction="left">
-			每周日会自动重排课表，并显示下周的课程
+			温馨提示：每周日会自动重排课表，并显示下周的课程
 		</marquee>
 
 		<h1>20日语2班班级课表简洁版</h1>
@@ -84,7 +84,7 @@
 			};
 			var current_date = today.toLocaleDateString('zh-CN', options);
 			// 将当前时间和本周数显示到网页上
-			var start = new Date('2023-09-04'); // 设置起始周的日期
+			var start = new Date('2023-09-03'); // 设置起始周的日期
 			var diff = Math.floor((today - start) / (1000 * 60 * 60 * 24 * 7)); // 计算已经过去了多少个完整的周期
 			var week_num = diff + 1; // 周数加一为当前周数
 			document.getElementById("week_num").innerHTML = "本周是第" + week_num + "周，"; // 输出相应的文字到网页上
