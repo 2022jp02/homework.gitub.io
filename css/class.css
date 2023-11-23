@@ -5,8 +5,8 @@ body {
 
 marquee {
 	/*滚动条css*/
-	background-color: #ffefd5;
-	color: red;
+	background-color:#fffae8;
+	color:#859900 ;
 	height: 25px;
 	line-height: 25px;
 	font-size: 16px;
