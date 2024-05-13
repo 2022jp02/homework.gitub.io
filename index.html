@@ -107,7 +107,7 @@
 			};
 			var current_date = today.toLocaleDateString('zh-CN', options);
 			// 将当前时间和本周数显示到网页上
-			var start = new Date('2023-09-03'); // 设置起始周的日期
+			var start = new Date('2024-03-05'); // 设置起始周的日期
 			var diff = Math.floor((today - start) / (1000 * 60 * 60 * 24 * 7)); // 计算已经过去了多少个完整的周期
 			var week_num = diff + 1; // 周数加一为当前周数
 			document.getElementById("week_num").innerHTML = "本周是第" + week_num + "周，"; // 输出相应的文字到网页上
@@ -115,7 +115,7 @@
 		</script>
 		<!--友情链接-->
 		<div style="text-align:center; margin: 50px 0px;">
-			<a href="./class.html">班级课表</a>
+			<a href="./class1.html">班级课表</a>
 			<span style="padding: 0 10px;">|</span>
 			<a href="./test.html">考试通知</a>
 			<span style="padding: 0 10px;">|</span>
